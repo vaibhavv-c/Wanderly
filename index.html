@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wanderly — Crafting memories, one wander at a time.</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="images/Logo.jpeg"  alt="Wanderly logo" class="brand-logo" />
+        <span class="brand-text">Wanderly</span>
+      </a>
+
+      <nav id="mainNav" class="nav" aria-label="Main navigation">
+        <a href="#hero">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Discover Your Next Adventure</h1>
+          <p class="tagline">Crafting memories, one wander at a time.</p>
+          <p class="lead">Personalized itineraries, hand-picked experiences, and local expertise — everything tailored to you.</p>
+
+          <form id="searchForm" class="search-form" onsubmit="return false;">
+            <input id="searchInput" aria-label="search-destination" type="text" placeholder="Where do you want to go? e.g., Goa" />
+            <select id="searchCategory" aria-label="category">
+              <option value="">All Packages</option>
+              <option value="beach">Beach</option>
+              <option value="adventure">Adventure</option>
+              <option value="culture">Cultural</option>
+            </select>
+            <button id="searchBtn" type="button">Search</button>
+          </form>
+
+          <div id="searchFeedback" class="search-feedback" aria-live="polite" hidden>
+            <!-- "Coming soon" or results summary will appear here -->
+          </div>
+
+          <div class="popular">
+            <strong>Popular:</strong>
+            <a class="chip" href="#packages" >Goa</a>
+            <a class="chip" href="#packages">Kerala</a>
+            <a class="chip" href="#packages">Rajasthan</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card card">
+            <img src="images/Goa Hero.webp" alt="Hero travel scene" />
+            <div class="card-body">
+              <h3>Featured — Goa Beach Escape</h3>
+              <p>4 days · from ₹8,999 · Flights + Hotel</p>
+              <a class="btn" href="#packages">Explore Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="section packages">
+      <div class="container">
+        <h2 class="section-title">Popular Packages</h2>
+        <div id="packagesGrid" class="grid packages-grid">
+          <article class="pkg card" data-title="Goa Beach Escape">
+            <img src="images/Goa.webp" alt="Goa Beach Escape" />
+            <div class="pkg-body">
+              <h3>Goa Beach Escape</h3>
+              <p>4 days · Beach resort · Sightseeing</p>
+              <div class="meta">
+                <span class="price">₹8,999</span>
+                <a class="btn-outline" href="#contact">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg card" data-title="Manali Hill Retreat">
+            <img src="images/Manali.webp" alt="Manali Hill Retreat" />
+            <div class="pkg-body">
+              <h3>Manali Hill Retreat</h3>
+              <p>5 days · Cozy cottages · Adventure</p>
+              <div class="meta">
+                <span class="price">₹12,499</span>
+                <a class="btn-outline" href="#contact">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg card" data-title="Rajasthan Royal Tour">
+            <img src="images/Rajasthan.webp" alt="Rajasthan Royal Tour" />
+            <div class="pkg-body">
+              <h3>Rajasthan Royal Tour</h3>
+              <p>7 days · Palaces & Culture</p>
+              <div class="meta">
+                <span class="price">₹22,000</span>
+                <a class="btn-outline" href="#contact">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pkg card" data-title="Kerala Backwater Escape">
+            <img src="images/kerala.jpg" alt="Kerala Backwater Escape" />
+            <div class="pkg-body">
+              <h3>Kerala Backwater Escape</h3>
+              <p>5 days · Houseboat stay · Sightseeing</p>
+              <div class="meta">
+                <span class="price">₹14,500</span>
+                <a class="btn-outline" href="#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="section light">
+      <div class="container">
+        <h2 class="section-title">Top Destinations</h2>
+        <div class="grid gallery-grid">
+          <figure class="card dest" data-title="Shimla"><img src="images/Shimla Town.webp" alt="Shimla"><figcaption>Shimla</figcaption></figure>
+          <figure class="card dest" data-title="Kerala"><img src="images/Kerala Houseboats.jpg" alt="Kerala"><figcaption>Kerala</figcaption></figure>
+          <figure class="card dest" data-title="Delhi"><img src="images/India Gate.jpg" alt="Delhi"><figcaption>Delhi</figcaption></figure>
+          <figure class="card dest" data-title="Andaman"><img src="images/Andaman.jpg" alt="Andaman"><figcaption>Andaman</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <h2>About Wanderly</h2>
+          <p>We design memorable trips, handle bookings, and provide local support — so you can focus on enjoying the journey.</p>
+          <ul>
+            <li>Trusted local partners</li>
+            <li>Flexible booking & free cancellations</li>
+            <li>Custom packages and group discounts</li>
+          </ul>
+        </div>
+        <div class="stats">
+          <div class="stat card"><h3>350+</h3><p>Destinations</p></div>
+          <div class="stat card"><h3>10k+</h3><p>Happy travelers</p></div>
+          <div class="stat card"><h3>12</h3><p>Years experience</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section light">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="grid feature-grid">
+          <div class="feature card"><h4>Affordable, curated trips</h4></div>
+          <div class="feature card"><h4>Trusted local guides</h4></div>
+          <div class="feature card"><h4>Flexible bookings</h4></div>
+          <div class="feature card"><h4>Custom packages</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="grid testimonial-grid">
+          <figure class="testimonial card">
+            <blockquote>“Wanderly made our honeymoon unforgettable! Every detail was perfect.”</blockquote>
+            <figcaption>— Priya & Rahul</figcaption>
+          </figure>
+
+          <figure class="testimonial card">
+            <blockquote>“Best travel experience ever! Everything was smooth.”</blockquote>
+            <figcaption>— Aman S.</figcaption>
+          </figure>
+
+          <figure class="testimonial card">
+            <blockquote>“Amazing packages at affordable prices. Highly recommend!”</blockquote>
+            <figcaption>— Neha K.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter">
+      <div class="container">
+        <h2 class="section-title">Subscribe to Our Newsletter</h2>
+        <p>Get the latest offers and travel tips straight to your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks — you are subscribed (demo).');">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT / MAP -->
+    <section id="contact" class="section light">
+      <div class="container contact-grid">
+        <div>
+          <h2>Visit Our Office</h2>
+          <p>Comp A, Cusrow Wadia Institute Of Technolgy, Bund Garden Rd, Sangamvadi, Pune, Maharashtra 411001</p>
+          <p><strong>Phone:</strong> +91 98765*****</p>
+          <p><strong>Email:</strong> wanderly123@gmail.com</p>
+        </div>
+        <aside class="map card">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.8888573640797!2d73.87980784418029!3d18.533923979152277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1f4159490ed%3A0xff63e74a7ebfca0e!2sCusrow%20Wadia%20Institute%20of%20technology!5e0!3m2!1sen!2sin!4v1760865926382!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Wanderly. All rights reserved.</p>
+      <div class="social">
+        <a class="icon" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="icon" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+        <a class="icon" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+        <a class="icon" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating admin button -->
+  <a class="admin-button" href="login.html" aria-label="Admin dashboard">Admin</a>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

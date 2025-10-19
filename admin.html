@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderly Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="admin-header">
+    <div class="admin-brand">Wanderly Admin</div>
+  </header>
+
+  <main class="admin-main container">
+    
+    <section class="stats-section">
+      <h2 class="section-title">Dashboard Stats</h2>
+      <div class="stats-grid">
+        <div class="stat">
+          <h3>Total Revenue</h3>
+          <p id="revenue">₹12,450</p>
+        </div>
+        <div class="stat">
+          <h3>Total Bookings</h3>
+          <p id="bookings">320</p>
+        </div>
+        <div class="stat">
+          <h3>Tourists</h3>
+          <p id="tourists">450</p>
+        </div>
+        <div class="stat">
+          <h3>Packages</h3>
+          <p id="packages">12</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages-section">
+      <h2 class="section-title">Packages Overview</h2>
+      <div class="packages-grid">
+        <div class="pkg-card">
+          <h4>Goa Getaway</h4>
+          <p>Cost: ₹350</p>
+          <p>Bookings: 45</p>
+        </div>
+        <div class="pkg-card">
+          <h4>Kerala Retreat</h4>
+          <p>Cost: ₹420</p>
+          <p>Bookings: 30</p>
+        </div>
+        <div class="pkg-card">
+          <h4>Himalayan Adventure</h4>
+          <p>Cost: ₹550</p>
+          <p>Bookings: 25</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="analytics-section">
+  <h2 class="section-title">Revenue & Tourist Trends</h2>
+
+  <!-- Revenue Bar Chart -->
+  <div class="chart">
+    <h3>Revenue (₹)</h3>
+    <div class="bar-chart">
+      <div class="bar" style="height:45%;">₹45k</div>
+      <div class="bar" style="height:52%;">₹52k</div>
+      <div class="bar" style="height:61%;">₹61k</div>
+      <div class="bar" style="height:48%;">₹48k</div>
+      <div class="bar" style="height:75%;">₹75k</div>
+      <div class="bar" style="height:69%;">₹69k</div>
+    </div>
+  </div>
+
+  <!-- Tourist Line/Progress Chart -->
+  <div class="chart" style="margin-top:2rem;">
+    <h3>Tourists</h3>
+    <div class="bar-chart">
+      <div class="bar" style="height:20%;">120</div>
+      <div class="bar" style="height:30%;">180</div>
+      <div class="bar" style="height:33%;">200</div>
+      <div class="bar" style="height:25%;">150</div>
+      <div class="bar" style="height:42%;">250</div>
+      <div class="bar" style="height:37%;">220</div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+</body>
+</html>
+

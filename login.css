@@ -1,0 +1,81 @@
+/* ---------------- Login Page ---------------- */
+body.login-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #00bfa6, #ff6b35);
+    overflow: hidden;
+}
+
+.login-card {
+    display: flex;             /* make card a flex container */
+    flex-direction: column;    /* stack children vertically */
+    justify-content: center;   /* center vertically */
+    align-items: center;       /* center horizontally */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem 2rem;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    width: 320px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-card h2 {
+    color: #072a28;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.login-card input[type="password"] {
+    width: 90%;               /* adjust width to fit nicely inside card */
+    padding: 0.9rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.6);
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: #072a28;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-card input::placeholder {
+    color: rgba(35,51,51,0.6);
+}
+
+.login-card button {
+    width: 90%;               /* match input width for alignment */
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 2s infinite;
+    margin-top: 0.8rem;
+}
+
+.login-card button:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 12px 28px rgba(255,65,108,0.35);
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-8px);}
+}
+
